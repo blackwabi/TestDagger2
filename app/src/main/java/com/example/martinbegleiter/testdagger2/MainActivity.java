@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Engine engine = new Engine(200);
+        Car car = new Car(engine);
+        car.accelerate();
+        car.brake();
+        car.getRpm();
     }
 
     @Override
