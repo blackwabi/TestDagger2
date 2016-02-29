@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Engine engine = new Engine(200);
-        Car car = new Car(engine);
+        Garage garage = DaggerGarageComponent.create().createGarage();
+        Car car = garage.getCar();
         car.accelerate();
         car.brake();
         car.getRpm();
