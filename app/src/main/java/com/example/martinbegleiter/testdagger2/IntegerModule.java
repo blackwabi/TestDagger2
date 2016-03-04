@@ -7,10 +7,10 @@ import dagger.Provides;
  * Created by martinbegleiter on 29/02/16.
  */
 @Module
-public class GarageModule {
+public class IntegerModule {
 
     @Provides
-    Garage provideGarage(Car car) {
-        return new Garage(car);
+    Integer provideInt() {
+        return new Integer(380);
     }
 }

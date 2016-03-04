@@ -5,7 +5,7 @@ import dagger.Component;
 /**
  * Created by martinbegleiter on 29/02/16.
  */
-@Component(modules = {GarageModule.class, CarModule.class, EngineModule.class})
+@Component(modules = {IntegerModule.class})
 public interface GarageComponent {
     Garage createGarage();
 }
