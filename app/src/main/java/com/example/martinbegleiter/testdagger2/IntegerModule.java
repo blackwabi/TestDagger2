@@ -1,5 +1,7 @@
 package com.example.martinbegleiter.testdagger2;
 
+import android.content.Context;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -8,6 +10,17 @@ import dagger.Provides;
  */
 @Module
 public class IntegerModule {
+
+    private final Context mContext;
+
+    public IntegerModule(Context applicationContext) {
+        mContext = applicationContext;
+    }
+
+    @Provides
+    Context provideContext() {
+        return mContext;
+    }
 
     @Provides
     Integer provideInt() {

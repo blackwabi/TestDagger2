@@ -27,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Garage garage = DaggerGarageComponent.create().createGarage();
+        GarageComponent garageComponent = DaggerGarageComponent.builder()
+                .integerModule(new IntegerModule(getApplicationContext())).build();
+        Garage garage = garageComponent.createGarage();
+
         Car car = garage.getCar();
         car.accelerate();
         car.brake();

@@ -1,5 +1,7 @@
 package com.example.martinbegleiter.testdagger2;
 
+import android.content.Context;
+
 import javax.inject.Inject;
 
 /**
@@ -7,6 +9,7 @@ import javax.inject.Inject;
  */
 public class Engine {
     private static final int RPM_INCREASE = 10;
+    private final Context mContext;
     private int mRpm;
 
     public int getRpm() {
@@ -22,7 +25,8 @@ public class Engine {
     }
 
     @Inject
-    public Engine(int baseRpm) {
+    public Engine(int baseRpm, Context context) {
         mRpm = baseRpm;
+        mContext = context;
     }
 }
