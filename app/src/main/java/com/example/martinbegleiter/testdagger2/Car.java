@@ -10,7 +10,6 @@ public class Car {
     private final Engine mEngine;
     private String mName;
 
-    @Inject
     public Car(Engine engine){
         mEngine = engine;
     }

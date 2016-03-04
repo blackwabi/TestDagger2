@@ -21,7 +21,6 @@ public class Engine {
         mRpm -= RPM_INCREASE;
     }
 
-    @Inject
     public Engine(int baseRpm) {
         mRpm = baseRpm;
     }
