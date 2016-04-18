@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
                 .integerModule(new IntegerModule(getApplicationContext())).build();
         Garage garage = garageComponent.createGarage();
 
+        ZooComponent zooComponent = DaggerZooComponent.builder().build();
+        Zoo zoo = zooComponent.createZoo();
+        Animal animal = zoo.getAnimal();
+        animal.run();
+        animal.makeNoise();
+
         Car car = garage.getCar();
         car.accelerate();
         car.brake();
